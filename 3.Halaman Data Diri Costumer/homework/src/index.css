@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css?family=Heebo&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
+header {
+  background-color: white;
+}
+
+body {
+  font-family: Heebo;
+  background-color: white;
+}
+
+footer {
+  background-color: #031120;
+  color: white;
+  font-family: "Open Sans";
+  line-height: 18px;
+  font-size: 12px;
+}
+
+dl {
+  font-family: "Noto Sans";
+  line-height: 50px;
+}
+
+.cstm-p {
+  padding-top: 10%;
+}
+.cstm-rad-l {
+  border-bottom-left-radius: 10px;
+}
+
+.cstm-rad-r {
+  border-bottom-right-radius: 10px;
+}
+
+.cstm-color {
+  color: #014a94;
+}
+
+.actv-list-group,
+.btn:hover {
+  background-color: #fff !important;
+  color: #014a94 !important;
+  border-left: 4px solid #014a94 !important;
+}
+
+.actv-tab-group,
+.btn:hover {
+  background-color: #014a94 !important;
+  color: #fff !important;
+  border-bottom: 3px solid rgba(255, 255, 255, 0.507) !important;
+}
+
+.btn-rst,
+.btn:hover {
+  cursor: pointer;
+}
+
+.cstm-bg {
+  background-color: #ededed;
+}
+
+.bor-rad {
+  border-radius: 20px;
+}
+
+.br-bot {
+  padding-bottom: 3%;
+  border-bottom: 3px solid rgb(110, 108, 107) !important;
+}
+
+h5 {
+  color: #014a94;
+}

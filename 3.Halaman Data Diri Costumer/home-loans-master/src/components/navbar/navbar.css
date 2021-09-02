@@ -1,0 +1,83 @@
+.navbar {
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: var(--topnav-height);
+}
+
+.navbar_search {
+    position: relative;
+    height: 50px;
+    background-color: var(--main-bg);
+    display: flex;
+    align-items: center;
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+.navbar_search > input {
+    height: 100%;
+    width: 100%;
+    padding: 10px 60px 10px 20px;
+    font-size: 1rem;
+    border-radius: var(--border-radius);
+    color: var(--txt-color);
+    background-color: var(--main-bg);
+}
+
+.navbar_search > i {
+    font-size: 1.5rem;
+    position: absolute;
+    right: 20px;
+}
+
+.navbar_right {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.navbar_right-item ~ .navbar_right-item {
+    margin-left: 10px;
+}
+
+.notification-item {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.notification-item :hover {
+    background-color: var(--second-bg);
+}
+
+.notification-item > i {
+    margin-right: 20px;
+    font-size: 1.5rem;
+}
+
+.navbar_user {
+    display: flex;
+    align-items: center;
+}
+
+.navbar_user-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+.navbar_user-img > img {
+    width: 100%;
+}
+
+.navbar_user-name {
+    font-size: 1rem;
+    font-weight: 600;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}

@@ -1,0 +1,140 @@
+.header{
+    height: 50px;
+    box-shadow: 5px 3px 10px rgb(214, 206, 206);
+    background-color: white;
+}
+
+.logo{
+    height: 33px;
+    width: 70px;
+}
+
+.leftbackground{
+   background-image: linear-gradient(rgb(116, 156, 230), rgb(16, 192, 177));
+   width: 600px;
+   height: 620px;
+}
+
+.banner-text{
+    font-family: Poppins;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 50px;
+    color: white;
+    position: absolute;
+    top: 35%;
+    left: 8%;
+}
+
+.content-text{
+    font-family: Poppins;
+    font-weight: normal;
+    line-height: 30px;
+    color: white;
+    position: absolute;
+    top: 52%;
+    left: 8%;
+}
+
+.form-control{
+    background-color: transparent;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    font-family: Poppins;
+    font-size: 14px;
+    appearance: none;
+    outline: 0;
+    line-height: 1;
+}
+
+.form-floating{
+    font-family: Poppins;
+    color: rgb(185, 182, 182);
+    background-color: transparent;
+    height: fit-content;
+}
+
+.far{
+    color: rgb(185, 182, 182);
+    /* margin-left: 285px; */
+}
+
+.login{
+    padding: 0px 84px 0px 120px ;
+}
+.input-group-text{
+    background-color: white;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+.login-text{
+    font-family: Poppins;
+    font-weight: bold;
+    font-size: 30px;
+    color: black;
+    padding-bottom: 8px;
+}
+
+.btn{
+    background-color: #44ABD4;
+    color: white;
+    border-radius: 20px;
+}
+
+.forgot{
+    display: block;
+    color: #555555;
+    font-size: 12px;
+    text-decoration: none;
+    float: right;
+    font-family: Poppins;
+}
+    
+.signup{
+    font-family: Poppins;
+    font-size: 14px;
+    float: left;
+}
+
+.signupbtn{
+    float: right;
+    background-color: #f0760f;
+    height: 30px;
+    width: auto;
+}
+
+.signup-text-btn{
+    font-size: 14px;
+    font-weight: lighter;
+    font-family: Poppins;
+}
+
+h6{
+    font-family: Poppins;
+    font-weight: normal;
+}
+
+.dropdown-menu{
+    background-color: #f9f9f9;
+    font-family: Poppins;
+}
+
+.dropdown-menu .dropdown-item {
+    color: black;
+    font-family: Poppins;
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background-color: #6D9EE2;
+    display: block;
+}
+
+.nav-link{
+    color: #212529;
+    font-family: Poppins;
+    font-weight: normal;
+}
+    
