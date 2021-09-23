@@ -1,69 +1,93 @@
 import datas from "../../assets/jsonData/datas";
 import { Breadcrumb, Button } from "antd";
-import { Content } from "antd/lib/layout/layout";
 // import React, { useEffect, useState } from "react";
 // import axios from "axios";
 
+import React, { useState, useEffect } from "react";
+import Axios from "axios";
+import { Content } from "antd/lib/layout/layout";
+
 function DetailPengajuan(props) {
-    // useEffect(() => {
-    //     getPengajuan();
-    // }, []);
+  const id = props.match.params.id;
+  // console.log("dapet ga nih idnya ?", id);
 
-    // const [pengajuan, setPengajuan] = useState([]);
+  const [state, setstate] = useState([]);
+  useEffect(() => {
+    getData();
+  }, []);
 
-    // const getPengajuan = async () => {
-    //     try {
-    //         const response = await axios.get("http://localhost:8000/pengajuan");
-    //         setPengajuan(response.data.data);
-    //     } catch (error) {
-    //         alert(error.message);
-    //     }
-    // };
-
-    const id = props.match.params.id;
-
-    //   console.log("dapet ga nih idnya ?", id);
-    const currentDetail = datas.filter((data) => {
-        if (data.id === id) {
+  const getData = async () => {
+    await Axios.get(
+      "https://a4260e57-47fb-4ddd-9dd6-d9d47ae89c4b.mock.pstmn.io/list_pengajuan"
+    ).then((res) => {
+      // console.log(res.data.data);
+      setstate(
+        res.data.data.filter((datas) => {
+          if (datas.id === id.id_pengajuan) {
             return true;
-        } else {
+          } else {
             return false;
-        }
-    })[0];
+          }
+        })[0]
+      );
+    });
+  };
 
-    console.log(currentDetail);
-    return (
-        <Content className="content__data">
-            <Breadcrumb className="content__breadcrumb">
-                <Breadcrumb.Item>Riwayat Pengajuan KPR</Breadcrumb.Item>
-            </Breadcrumb>
-            <div className="homepage-1">
-                <div className="site-layout-background card">
-                    <h3 className="title">Profile</h3>
-                    <div className="data__diri">
-                        <div
-                            className="homepage__content"
-                            key={currentDetail.id}
-                        >
-                            <p>
-                                <span>Tanggal Pengajuan</span>
-                                {currentDetail.tanggal_pengajuan}
-                            </p>
-                            <p>
-                                <span>Nama Lengkap</span>
-                                {currentDetail.nama}
-                            </p>
-                        </div>
-                    </div>
-                    <div className="button__reset">
-                        <Button size="large" className="button_1">
-                            Reset Data Diri
-                        </Button>
-                    </div>
-                </div>
+  return (
+    <Content className="content__data">
+      <Breadcrumb className="content__breadcrumb">
+        <Breadcrumb.Item>Riwayat Pengajuan KPR</Breadcrumb.Item>
+      </Breadcrumb>
+      <div className="homepage-1">
+        <div className="site-layout-background card">
+          <h3 className="title">Profile</h3>
+          <div className="data__diri">
+            <div
+              className="homepage__content"
+              // key={currentDetail.id}
+            >
+              <p>
+                <span>NIK</span>
+                {state.nik}
+              </p>
+              <p>
+                <span>Nama Lengkap</span>
+                {state.nama_lengkap}
+              </p>
+              <p>
+                <span>Tempat, Tanggal Lahir</span>
+                {state.tempat_lahir} {state.tanggal_lahir}
+              </p>
+              <p>
+                <span>Alamat Saat Ini</span>
+                {state.alamat}
+              </p>
+              <p>
+                <span>Pekerjaan</span>
+                {state.pekerjaan}
+              </p>
+              <p>
+                <span>Pendapatan perbulan</span>
+                {state.pendapatan_perbulan}
+              </p>
+              <p>
+                <span>Bukti Selfie KTP</span>
+                <a href="#">{state.bukti_ktp}</a>
+              </p>
+              <p>
+                <span>Bukti Gaji </span>
+                <a href="#">{state.bukti_gaji}</a>
+              </p>
+              <p>
+                <span>Status Verifikasi </span>
+                {state.status}
+              </p>
             </div>
-        </Content>
-    );
+          </div>
+        </div>
+      </div>
+    </Content>
+  );
 }
 
 export default DetailPengajuan;
