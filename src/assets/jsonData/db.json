@@ -1,101 +1,131 @@
 {
-    "pengajuan": {
-        "status": 200,
-        "message": "berhasil",
-        "data": [
-            {
-                "id_pengajuan": 1,
-                "id_cust": 1,
-                "nik": "12345678900999",
-                "nama_lengkap": "Rizkhita H. Muhtar",
-                "tempat_lahir": "Bandung",
-                "tanggal_lahir": "07/08/1980",
-                "alamat": "Jl. Raya Bandung, Gedung Sate, Jawa Barat",
-                "pekerjaan": "Freelance Software Enggineer",
-                "pendapatan_perbulan": "Rp. 8.000.000",
-                "bukti_ktp": "file-slip-gaji.pdf",
-                "bukti_gaji": "file-slip-gaji.pdf",
-                "action": "lihat detail",
-                "status": 1
-            }
-        ]
-    },
-    "list_kelengkapan": {
-        "status": 200,
-        "message": "berhasil",
-        "data": [
-            {
-                "id_kelengkapan": 1,
-                "id_pengajuan": 1,
-                "alamat_rumah": "Jl.Permai 5 No.11A, Komplek Cipadung Permai Bandung Raya",
-                "luas_rumah": 500,
-                "harga_rumah": 500000000,
-                "jangka_pembayaran_thn": 5,
-                "dokumen_pendukung": "test.pdf",
-                "status": 1
-            }
-        ]
-    },
-    "sidebar_routes": [
-        {
-            "id": 1,
-            "display_name": "Beranda",
-            "route": "/",
-            "icon": "bx bx-category-alt"
-        },
-        {
-            "id": 2,
-            "display_name": "Pengajuan KPR",
-            "route": "/kpr",
-            "icon": "bx bx-user-pin"
-        },
-        {
-            "id": 3,
-            "display_name": "Riwayat Pengajuan",
-            "route": "/riwayat",
-            "icon": "bx bx-user-pin"
-        },
-        {
-            "id": 4,
-            "display_name": "Data Pengajuan KPR",
-            "route": "/data",
-            "icon": "bx bx-cog"
-        },
-        {
-            "id": 5,
-            "display_name": "Keluar",
-            "route": "/logout",
-            "icon": "bx bx-log-out-circle"
-        }
-    ],
-    "list_pengajuan": [
-        {
-            "id": 123,
-            "nama": "Abrianto",
-            "tanggal_pengajuan": "11 September 2021",
-            "status": 1,
-            "action": "lihat detail"
-        },
-        {
-            "id": 234,
-            "nama": "Prawito",
-            "tanggal_pengajuan": "7 Juli 2021",
-            "status": 1,
-            "action": "lihat detail"
-        },
-        {
-            "id": 235,
-            "nama": "Putra",
-            "tanggal_pengajuan": "22 Agustus 2021",
-            "status": 1,
-            "action": "lihat detail"
-        },
-        {
-            "id": 465,
-            "nama": "Irham",
-            "tanggal_pengajuan": "17 Juli 2021",
-            "status": 1,
-            "action": "lihat detail"
-        }
+  "pengajuan": {
+    "status": 200,
+    "message": "berhasil",
+    "data": [
+      {
+        "id_pengajuan": 1,
+        "id_cust": 1,
+        "nik": "12345678900999",
+        "nama_lengkap": "Rizkhita H. Muhtar",
+        "tempat_lahir": "Bandung",
+        "tanggal_lahir": "07/08/1980",
+        "alamat": "Jl. Raya Bandung, Gedung Sate, Jawa Barat",
+        "pekerjaan": "Freelance Software Enggineer",
+        "pendapatan_perbulan": "Rp. 8.000.000",
+        "bukti_ktp": "file-slip-gaji.pdf",
+        "bukti_gaji": "file-slip-gaji.pdf",
+        "action": "lihat detail",
+        "status": 1
+      },
+      {
+        "id_pengajuan": 2,
+        "id_cust": 2,
+        "nik": "12345678900999",
+        "nama_lengkap": "Ridwan Kamil",
+        "tempat_lahir": "Bandung",
+        "tanggal_lahir": "07/08/1980",
+        "alamat": "Jl. Raya Bandung, Gedung Sate, Jawa Barat",
+        "pekerjaan": "Freelance Software Enggineer",
+        "pendapatan_perbulan": "Rp. 8.000.000",
+        "bukti_ktp": "file-slip-gaji.pdf",
+        "bukti_gaji": "file-slip-gaji.pdf",
+        "action": "lihat detail",
+        "status": 2
+      },
+      {
+        "id_pengajuan": 3,
+        "id_cust": 3,
+        "nik": "12345678900999",
+        "nama_lengkap": "Sule",
+        "tempat_lahir": "Bandung",
+        "tanggal_lahir": "07/08/1980",
+        "alamat": "Jl. Raya Bandung, Gedung Sate, Jawa Barat",
+        "pekerjaan": "Freelance Software Enggineer",
+        "pendapatan_perbulan": "Rp. 8.000.000",
+        "bukti_ktp": "file-slip-gaji.pdf",
+        "bukti_gaji": "file-slip-gaji.pdf",
+        "action": "lihat detail",
+        "status": 1
+      }
     ]
+  },
+  "list_kelengkapan": {
+    "status": 200,
+    "message": "berhasil",
+    "data": [
+      {
+        "id_kelengkapan": 1,
+        "id_pengajuan": 1,
+        "alamat_rumah": "Jl.Permai 5 No.11A, Komplek Cipadung Permai Bandung Raya",
+        "luas_rumah": 500,
+        "harga_rumah": 500000000,
+        "jangka_pembayaran_thn": 5,
+        "dokumen_pendukung": "test.pdf",
+        "status": 1
+      }
+    ]
+  },
+  "sidebar_routes": [
+    {
+      "id": 1,
+      "display_name": "Beranda",
+      "route": "/",
+      "icon": "bx bx-category-alt"
+    },
+    {
+      "id": 2,
+      "display_name": "Pengajuan KPR",
+      "route": "/kpr",
+      "icon": "bx bx-user-pin"
+    },
+    {
+      "id": 3,
+      "display_name": "Riwayat Pengajuan",
+      "route": "/riwayat",
+      "icon": "bx bx-user-pin"
+    },
+    {
+      "id": 4,
+      "display_name": "Data Pengajuan KPR",
+      "route": "/data",
+      "icon": "bx bx-cog"
+    },
+    {
+      "id": 5,
+      "display_name": "Keluar",
+      "route": "/logout",
+      "icon": "bx bx-log-out-circle"
+    }
+  ],
+  "list_pengajuan": [
+    {
+      "id": 123,
+      "nama": "Abrianto",
+      "tanggal_pengajuan": "11 September 2021",
+      "status": 1,
+      "action": "lihat detail"
+    },
+    {
+      "id": 234,
+      "nama": "Prawito",
+      "tanggal_pengajuan": "7 Juli 2021",
+      "status": 1,
+      "action": "lihat detail"
+    },
+    {
+      "id": 235,
+      "nama": "Putra",
+      "tanggal_pengajuan": "22 Agustus 2021",
+      "status": 1,
+      "action": "lihat detail"
+    },
+    {
+      "id": 465,
+      "nama": "Irham",
+      "tanggal_pengajuan": "17 Juli 2021",
+      "status": 1,
+      "action": "lihat detail"
+    }
+  ]
 }

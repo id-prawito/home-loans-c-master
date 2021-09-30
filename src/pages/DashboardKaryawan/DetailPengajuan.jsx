@@ -1,88 +1,83 @@
-import datas from "../../assets/jsonData/datas";
-import { Breadcrumb, Button } from "antd";
-// import React, { useEffect, useState } from "react";
-// import axios from "axios";
-
 import React, { useState, useEffect } from "react";
-import Axios from "axios";
-import { Content } from "antd/lib/layout/layout";
+import { useParams } from "react-router";
+import axios from "axios";
+import { Breadcrumb, Select } from "antd";
+import { Content, Option } from "antd/lib/layout/layout";
 
-function DetailPengajuan(props) {
-  const id = props.match.params.id;
-  // console.log("dapet ga nih idnya ?", id);
+export default function DetailPengajuan() {
+  const [pengajuan, setPengajuan] = useState([]);
+  let { id } = useParams();
+  // const id = match.useParams.id;
+  // console.log("dapat ga nih idnya ? ->", pengajuan);
 
-  const [state, setstate] = useState([]);
-  useEffect(() => {
-    getData();
-  }, []);
-
-  const getData = async () => {
-    await Axios.get(
-      "https://a4260e57-47fb-4ddd-9dd6-d9d47ae89c4b.mock.pstmn.io/list_pengajuan"
-    ).then((res) => {
-      // console.log(res.data.data);
-      setstate(
-        res.data.data.filter((datas) => {
-          if (datas.id === id.id_pengajuan) {
-            return true;
-          } else {
-            return false;
-          }
-        })[0]
-      );
-    });
+  const getPengajuan = async () => {
+    let response = await axios.get(
+      `https://a4260e57-47fb-4ddd-9dd6-d9d47ae89c4b.mock.pstmn.io/pengajuan/`,
+      {
+        params: {
+          id_customer: { id },
+        },
+      }
+    );
+    setPengajuan(response.data.data);
   };
+
+  // console.log(">>>", pengajuan);
+
+  useEffect(() => {
+    getPengajuan();
+  }, [id]);
 
   return (
     <Content className="content__data">
       <Breadcrumb className="content__breadcrumb">
-        <Breadcrumb.Item>Riwayat Pengajuan KPR</Breadcrumb.Item>
+        <Breadcrumb.Item>Data Pengajuan KPR</Breadcrumb.Item>
       </Breadcrumb>
-      <div className="homepage-1">
-        <div className="site-layout-background card">
-          <h3 className="title">Profile</h3>
-          <div className="data__diri">
-            <div
-              className="homepage__content"
-              // key={currentDetail.id}
-            >
-              <p>
-                <span>NIK</span>
-                {state.nik}
-              </p>
-              <p>
-                <span>Nama Lengkap</span>
-                {state.nama_lengkap}
-              </p>
-              <p>
-                <span>Tempat, Tanggal Lahir</span>
-                {state.tempat_lahir} {state.tanggal_lahir}
-              </p>
-              <p>
-                <span>Alamat Saat Ini</span>
-                {state.alamat}
-              </p>
-              <p>
-                <span>Pekerjaan</span>
-                {state.pekerjaan}
-              </p>
-              <p>
-                <span>Pendapatan perbulan</span>
-                {state.pendapatan_perbulan}
-              </p>
-              <p>
-                <span>Bukti Selfie KTP</span>
-                <a href="#">{state.bukti_ktp}</a>
-              </p>
-              <p>
-                <span>Bukti Gaji </span>
-                <a href="#">{state.bukti_gaji}</a>
-              </p>
-              <p>
-                <span>Status Verifikasi </span>
-                {state.status}
-              </p>
-            </div>
+      <div className="site-layout-background card">
+        <h3 className="title">Data Diri Pengajuan KPR</h3>
+        <div className="data__diri">
+          <div className="data__content">
+            <p>
+              <span>Nomor Induk KTP :</span>
+              {pengajuan.nik}
+            </p>
+            <p>
+              <span>Nama Lengkap :</span>
+              {pengajuan.nama_lengkap}
+            </p>
+            <p>
+              <span>Tempat, Tanggal Lahir :</span>
+              {pengajuan.tempat_lahir}, {pengajuan.tanggal_lahir}
+            </p>
+            <p>
+              <span>Alamat Saat Ini:</span>
+              {pengajuan.alamat}
+            </p>
+            <p>
+              <span>Pekerjaan:</span>
+              {pengajuan.pekerjaan}
+            </p>
+            <p>
+              <span>Pendapatan per bulan:</span>
+              {pengajuan.pendapatan_perbulan}
+            </p>
+            <p>
+              <span>Bukti Selfie KTP:</span>
+              {pengajuan.bukti_ktp}
+            </p>
+            <p>
+              <span>Bukti Slip Gaji:</span>
+              {pengajuan.bukti_gaji}
+            </p>
+            <p>
+              <span>Status:</span>
+              {pengajuan.status === 1
+                ? "Menunggu Verifikasi"
+                : pengajuan.status === 2
+                ? "Terverifikasi"
+                : "Tidak Terverifikasi"}
+            </p>
+            <Status />
           </div>
         </div>
       </div>
@@ -90,4 +85,16 @@ function DetailPengajuan(props) {
   );
 }
 
-export default DetailPengajuan;
+function Status() {
+  const { Option } = Select;
+  function handlechange(value) {
+    console.log(`selected ${value}`);
+  }
+
+  return (
+    <Select defaultValue="Menunggu Konfirmasi" onChange={handlechange}>
+      <Option value="3">Terverifikasi</Option>
+      <Option value="2">Tidak Terverifikasi</Option>
+    </Select>
+  );
+}
