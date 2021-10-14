@@ -1,0 +1,26 @@
+.dashboard__beranda {
+    display: grid;
+    gap: 20px;
+}
+
+.content__beranda {
+    display: flex;
+    justify-content: center;
+}
+
+.image__beranda {
+    display: block !important;
+    max-width: 100% !important;
+    width: 400px !important;
+}
+
+.field__form {
+    border-radius: 10px !important;
+    font-size: 16px !important;
+}
+
+.label_field-form {
+    font-size: 14px !important;
+    font-weight: 600;
+    color: #474747;
+}

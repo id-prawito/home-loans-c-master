@@ -1,7 +1,8 @@
-import { Breadcrumb, Button, Input, Form, DatePicker, Upload } from "antd";
+import { Button, Input, Form, DatePicker, Upload } from "antd";
 import React from "react";
 import { Content } from "antd/lib/layout/layout";
 import { InboxOutlined } from "@ant-design/icons";
+import "../../app.css";
 
 const FormData = () => {
     const onFinish = (values) => {
@@ -12,15 +13,63 @@ const FormData = () => {
         console.log("Failed:", errorInfo);
     };
 
+    // const [isActive, setActive] = useState(false);
+    // const [message, setMessage] = useState("Success");
+    // const [onSuccess, setSuccess] = useState(false);
+
+    // const onFinish = (values) => {
+    //     var startIndex =
+    //         values.ktp.indexOf("\\") >= 0
+    //             ? values.ktp.lastIndexOf("\\")
+    //             : values.ktp.lastIndexOf("/");
+    //     var filename = values.ktp.substring(startIndex);
+    //     if (filename.indexOf("\\") === 0 || filename.indexOf("/") === 0) {
+    //         filename = filename.substring(1);
+    //     }
+    //     const payload = {
+    //         id_cust: 1,
+    //         nik: Number(values.nik),
+    //         nama_lengkap: values.fullname,
+    //         tempat_lahir: values.ttl.tempat,
+    //         tanggal_lahir: new Date(values.ttl.tanggal).toLocaleDateString(
+    //             "en-US"
+    //         ),
+    //         alamat: values.alamat,
+    //         pekerjaan: values.jenis_pekerjaan,
+    //         pendapatan_perbulan: Number(values.pendapatan),
+    //         bukti_ktp: filename,
+    //     };
+
+    //     setActive(true);
+    //     axios
+    //         .post(
+    //             `https://697e2e1d-d698-4f34-b4a7-f9c168e24ff6.mock.pstmn.io/buat_pengajuan`,
+    //             { payload }
+    //         )
+    //         .then((res) => {
+    //             try {
+    //                 if (res.status === 200) {
+    //                     const result = res.data;
+    //                     setActive(false);
+    //                     setMessage(result.message);
+    //                     setSuccess(true);
+    //                     setTimeout(function () {
+    //                         window.location.href = "data-pendukung";
+    //                     }, 3000);
+    //                 }
+    //             } catch (error) {
+    //                 setActive(false);
+    //             }
+    //         });
+    // };
+
     return (
-        <Content className="content__data">
-            <Breadcrumb className="content__breadcrumb">
-                <Breadcrumb.Item>Form Data Pengajuan KPR</Breadcrumb.Item>
-            </Breadcrumb>
-            <div className="form__data">
-                <div className="site-layout-background card">
-                    <h3 className="title">Silahkan Isi Form Data Diri</h3>
-                    <div className="data__diri">
+        <div>
+            <Content className="content__data">
+                <div className="form__data">
+                    <div className="site-layout-background card">
+                        <h3 className="title">Silahkan Isi Form Data Diri</h3>
+                        {/* Component Form Register Ant Design */}
                         <Form
                             name="basic"
                             size="large"
@@ -41,8 +90,8 @@ const FormData = () => {
                                     }}
                                     name="nik"
                                     label={
-                                        <label className="label_field">
-                                            No. Induk KTP
+                                        <label className="label_field-form">
+                                            NO. INDUK KTP
                                         </label>
                                     }
                                     rules={[
@@ -52,13 +101,13 @@ const FormData = () => {
                                         },
                                     ]}
                                 >
-                                    <Input />
+                                    <Input className="field__form" />
                                 </Form.Item>
                                 <Form.Item
                                     name="nama_lengkap"
                                     label={
-                                        <label className="label_field">
-                                            Nama Lengkap
+                                        <label className="label_field-form">
+                                            NAMA LENGKAP
                                         </label>
                                     }
                                     rules={[
@@ -68,7 +117,7 @@ const FormData = () => {
                                         },
                                     ]}
                                 >
-                                    <Input />
+                                    <Input className="field__form" />
                                 </Form.Item>
 
                                 <Form.Item
@@ -79,8 +128,8 @@ const FormData = () => {
                                     <Form.Item
                                         name="tempat_lahir"
                                         label={
-                                            <label className="label_field">
-                                                Tempat
+                                            <label className="label_field-form">
+                                                TEMPAT
                                             </label>
                                         }
                                         rules={[
@@ -95,12 +144,12 @@ const FormData = () => {
                                             width: "calc(50% - 8px)",
                                         }}
                                     >
-                                        <Input />
+                                        <Input className="field__form" />
                                     </Form.Item>
                                     <Form.Item
                                         label={
                                             <label className="label_field">
-                                                Tanggal Lahir
+                                                TANGGAL LAHIR
                                             </label>
                                         }
                                         name="tanggal_lahir"
@@ -121,6 +170,7 @@ const FormData = () => {
                                             style={{
                                                 width: "100%",
                                             }}
+                                            className="field__form"
                                         />
                                     </Form.Item>
                                 </Form.Item>
@@ -128,7 +178,7 @@ const FormData = () => {
                                     name="alamat"
                                     label={
                                         <label className="label_field">
-                                            Alamat Saat Ini
+                                            ALAMAT SAAT INI
                                         </label>
                                     }
                                     rules={[
@@ -139,13 +189,13 @@ const FormData = () => {
                                         },
                                     ]}
                                 >
-                                    <Input />
+                                    <Input className="field__form" />
                                 </Form.Item>
                                 <Form.Item
                                     name="pekerjaan"
                                     label={
                                         <label className="label_field">
-                                            Pekerjaan
+                                            PEKERJAAN
                                         </label>
                                     }
                                     rules={[
@@ -155,13 +205,13 @@ const FormData = () => {
                                         },
                                     ]}
                                 >
-                                    <Input />
+                                    <Input className="field__form" />
                                 </Form.Item>
                                 <Form.Item
                                     name="pendapatan_perbulan"
                                     label={
                                         <label className="label_field">
-                                            Pendapatan Perbulan
+                                            PENDAPATAN PER BULAN
                                         </label>
                                     }
                                     rules={[
@@ -172,20 +222,14 @@ const FormData = () => {
                                         },
                                     ]}
                                 >
-                                    <Input />
+                                    <Input className="field__form" />
                                 </Form.Item>
                                 <Form.Item
                                     name="bukti_ktp"
                                     valuePropName="fileList"
                                     label={
-                                        <label
-                                            style={{
-                                                fontSize: 15,
-                                                fontWeight: 600,
-                                                color: "#838383",
-                                            }}
-                                        >
-                                            Bukti Selfie KTP
+                                        <label className="label_field">
+                                            BUKTI SELFIE KTP
                                         </label>
                                     }
                                     rules={[
@@ -196,14 +240,14 @@ const FormData = () => {
                                         },
                                     ]}
                                 >
-                                    <Upload.Dragger>
+                                    <Upload.Dragger className="field__form">
                                         <div className="home">
                                             <p className="ant-upload-drag-icon">
                                                 <InboxOutlined />
                                             </p>
                                             <p className="ant-upload-text">
-                                                Click or drag file to this area
-                                                to upload
+                                                Klik atau masukan file pada area
+                                                ini untuk di uplaod
                                             </p>
                                             <p className="ant-upload-hint">
                                                 Upload file selfie KTP dalam
@@ -216,14 +260,8 @@ const FormData = () => {
                                     name="bukti_slip_gaji"
                                     valuePropName="fileList"
                                     label={
-                                        <label
-                                            style={{
-                                                fontSize: 15,
-                                                fontWeight: 600,
-                                                color: "#838383",
-                                            }}
-                                        >
-                                            Bukti Slip Gaji
+                                        <label className="label_field">
+                                            BUKTI SLIP GAJI
                                         </label>
                                     }
                                     rules={[
@@ -234,18 +272,18 @@ const FormData = () => {
                                         },
                                     ]}
                                 >
-                                    <Upload.Dragger>
+                                    <Upload.Dragger className="field__form">
                                         <div className="home">
                                             <p className="ant-upload-drag-icon">
                                                 <InboxOutlined />
                                             </p>
                                             <p className="ant-upload-text">
-                                                Click or drag file to this area
-                                                to upload
+                                                Klik atau masukan file pada area
+                                                ini untuk di uplaod
                                             </p>
                                             <p className="ant-upload-hint">
-                                                Upload file selfie KTP dalam
-                                                bentuk .pdf
+                                                Upload file bukti slip gaji
+                                                dalam bentuk .pdf
                                             </p>
                                         </div>
                                     </Upload.Dragger>
@@ -268,7 +306,7 @@ const FormData = () => {
                                                 fontSize: 14,
                                             }}
                                         >
-                                            Submit
+                                            SUBMIT DATA PENGAJUAN
                                         </Button>
                                     </div>
                                 </Form.Item>
@@ -276,8 +314,8 @@ const FormData = () => {
                         </Form>
                     </div>
                 </div>
-            </div>
-        </Content>
+            </Content>
+        </div>
     );
 };
 

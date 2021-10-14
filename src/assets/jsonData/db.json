@@ -1,70 +1,91 @@
 {
-    "pengajuan": {
-        "status": 200,
-        "message": "berhasil",
-        "data": [
-            {
-                "id_pengajuan": 1,
-                "id_cust": 1,
-                "nik": "12345678900999",
-                "nama_lengkap": "Rizkhita H. Muhtar",
-                "tempat_lahir": "Bandung",
-                "tanggal_lahir": "07/08/1980",
-                "alamat": "Jl. Raya Bandung, Gedung Sate, Jawa Barat",
-                "pekerjaan": "Freelance Software Enggineer",
-                "pendapatan_perbulan": "Rp. 8.000.000",
-                "bukti_ktp": "file-slip-gaji.pdf",
-                "bukti_gaji": "file-slip-gaji.pdf",
-                "action": "lihat detail",
-                "status": 1
-            }
-        ]
-    },
-    "list_kelengkapan": {
-        "status": 200,
-        "message": "berhasil",
-        "data": [
-            {
-                "id_kelengkapan": 1,
-                "id_pengajuan": 1,
-                "alamat_rumah": "Jl.Permai 5 No.11A, Komplek Cipadung Permai Bandung Raya",
-                "luas_rumah": 500,
-                "harga_rumah": 500000000,
-                "jangka_pembayaran_thn": 5,
-                "dokumen_pendukung": "test.pdf",
-                "status": 1
-            }
-        ]
-    },
+    "pengajuan": [
+        {
+            "id_pengajuan": 1,
+            "id_cust": 1,
+            "nik": "12345678900999",
+            "nama_lengkap": "Rizkhita H. Muhtar",
+            "tempat_lahir": "Bandung",
+            "tanggal_lahir": "07/08/1980",
+            "alamat": "Jl. Raya Bandung, Gedung Sate, Jawa Barat",
+            "pekerjaan": "Freelance Software Enggineer",
+            "pendapatan_perbulan": "Rp. 8.000.000",
+            "bukti_ktp": "file-slip-gaji.pdf",
+            "bukti_gaji": "file-slip-gaji.pdf",
+            "action": "lihat detail",
+            "status": 2
+        },
+        {
+            "id_pengajuan": 2,
+            "id_cust": 2,
+            "nik": "12345678900999",
+            "nama_lengkap": "Rizkhita H. Muhtar",
+            "tempat_lahir": "Bandung",
+            "tanggal_lahir": "07/08/1980",
+            "alamat": "Jl. Raya Bandung, Gedung Sate, Jawa Barat",
+            "pekerjaan": "Freelance Software Enggineer",
+            "pendapatan_perbulan": "Rp. 8.000.000",
+            "bukti_ktp": "file-slip-gaji.pdf",
+            "bukti_gaji": "file-slip-gaji.pdf",
+            "action": "lihat detail",
+            "status": 1
+        }
+    ],
+    "list_kelengkapan": [
+        {
+            "id_kelengkapan": 1,
+            "id_pengajuan": 1,
+            "alamat_rumah": "Jl.Permai 5 No.11A, Komplek Cipadung Permai Bandung Raya",
+            "luas_rumah": 500,
+            "harga_rumah": 500000000,
+            "jangka_pembayaran_thn": 5,
+            "dokumen_pendukung": "test.pdf",
+            "status": 1
+        }
+    ],
     "sidebar_routes": [
         {
             "id": 1,
             "display_name": "Beranda",
-            "route": "/",
+            "route": "/customer",
             "icon": "bx bx-category-alt"
         },
         {
             "id": 2,
             "display_name": "Pengajuan KPR",
-            "route": "/kpr",
+            "route": "/customer/kpr",
             "icon": "bx bx-user-pin"
         },
         {
             "id": 3,
-            "display_name": "Riwayat Pengajuan",
-            "route": "/riwayat",
-            "icon": "bx bx-user-pin"
-        },
-        {
-            "id": 4,
             "display_name": "Data Pengajuan KPR",
-            "route": "/data",
+            "route": "/customer/data",
             "icon": "bx bx-cog"
         },
         {
-            "id": 5,
+            "id": 4,
             "display_name": "Keluar",
-            "route": "/logout",
+            "route": "/",
+            "icon": "bx bx-log-out-circle"
+        }
+    ],
+    "sidebar_routes_petugas": [
+        {
+            "id": 1,
+            "display_name": "Beranda",
+            "route": "/petugas/beranda",
+            "icon": "bx bx-category-alt"
+        },
+        {
+            "id": 2,
+            "display_name": "Pengajuan KPR",
+            "route": "/petugas/daftar-pengajuan",
+            "icon": "bx bx-user-pin"
+        },
+        {
+            "id": 3,
+            "display_name": "Keluar",
+            "route": "/",
             "icon": "bx bx-log-out-circle"
         }
     ],
@@ -96,6 +117,58 @@
             "tanggal_pengajuan": "17 Juli 2021",
             "status": 1,
             "action": "lihat detail"
+        }
+    ],
+    "user": [
+        {
+            "id": 1,
+            "username": "praw",
+            "password": "pass"
+        },
+        {
+            "username": "Praw",
+            "password": "123456",
+            "id": 2
+        },
+        {
+            "username": "Praw",
+            "password": "123456",
+            "id": 3
+        },
+        {
+            "username": "Praw",
+            "password": "1234567",
+            "id": 4
+        },
+        {
+            "username": "Prawito",
+            "password": "12334567",
+            "id": 5
+        },
+        {
+            "username": "prawito",
+            "password": "1234567",
+            "id": 6
+        },
+        {
+            "username": "prawito",
+            "password": "1234567",
+            "id": 7
+        },
+        {
+            "username": "praw",
+            "password": "12345678",
+            "id": 8
+        },
+        {
+            "username": "dsfsdf",
+            "password": "fsdfsd",
+            "id": 9
+        },
+        {
+            "username": "dsfsdf",
+            "password": "fsdfsd",
+            "id": 10
         }
     ]
 }
