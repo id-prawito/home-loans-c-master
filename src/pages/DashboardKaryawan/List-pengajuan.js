@@ -1,11 +1,7 @@
-import React from 'react'
+import React from "react";
 
-function List-pengajuan() {
-    return (
-        <div>
-            test
-        </div>
-    )
+function ListPengajuan() {
+  return <div>test</div>;
 }
 
-export default List-pengajuan
+export default List - pengajuan;
