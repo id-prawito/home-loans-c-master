@@ -2,7 +2,7 @@ import { Button, Input, Form, Upload, Select } from "antd";
 import React from "react";
 import { Content } from "antd/lib/layout/layout";
 import { InboxOutlined } from "@ant-design/icons";
-import "../../app.css";
+import "../../../app.css";
 const { TextArea } = Input;
 
 const FormKelengkapan = () => {

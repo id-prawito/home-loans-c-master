@@ -1,5 +1,5 @@
 import { Button, Image } from "antd";
-import loan from "../../assets/img/loan.gif";
+import loan from "../../../assets/img/loan.gif";
 import { Content, Header } from "antd/lib/layout/layout";
 
 const Beranda = () => {

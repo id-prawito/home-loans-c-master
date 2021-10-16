@@ -1,8 +1,8 @@
 import { Button, Image } from "antd";
-import berandaImage from "../../assets/img/beranda.png";
+import berandaImage from "../../../assets/img/beranda.png";
 import { Content, Header } from "antd/lib/layout/layout";
 import React from "react";
-import "../app.css";
+import "../../app.css";
 // import React, { useEffect, useState } from "react";
 // import { Redirect } from "react-router-dom";
 // import axios from "axios";

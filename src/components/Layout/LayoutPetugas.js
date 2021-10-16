@@ -1,7 +1,4 @@
 import React from "react";
-import "../index.css";
-import logo from "../assets/img/logo.svg";
-import Routes from "./Routes";
 import { Link } from "react-router-dom";
 import { Layout, Menu, Image } from "antd";
 import {
@@ -10,6 +7,10 @@ import {
     AppstoreOutlined,
     PoweroffOutlined,
 } from "@ant-design/icons";
+import logo from "../../assets/img/logo.svg";
+import Routes from "../../routes/dashboard.routes";
+import "../../index.css";
+
 const { Footer, Sider } = Layout;
 
 const LayoutPetugas = () => {
