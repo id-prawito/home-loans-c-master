@@ -1,6 +1,6 @@
 import React from "react";
-import DataPengajuan from "./DataPengajuan/DataPengajuan";
-import DataKelengkapan from "./DataPengajuan/DataKelengkapan";
+import DataPengajuan from "./Data/DataPengajuan";
+import DataKelengkapan from "./Data/DataKelengkapan";
 import { Header } from "antd/lib/layout/layout";
 
 function HandleData() {

@@ -2,7 +2,7 @@ import { Button, Input, Form, DatePicker, Upload } from "antd";
 import React from "react";
 import { Content } from "antd/lib/layout/layout";
 import { InboxOutlined } from "@ant-design/icons";
-import "../../app.css";
+import "../../../app.css";
 
 const FormData = () => {
     const onFinish = (values) => {

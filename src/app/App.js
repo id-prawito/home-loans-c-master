@@ -1,9 +1,9 @@
 import { QueryClient, QueryClientProvider } from "react-query";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import LayoutHome from "../components/LayoutHome";
-import LayoutPetugas from "../components/LayoutPetugas";
-import Login from "../pages/Login/Login";
-import Register from "../pages/Register/Register";
+import LayoutHome from "../components/Layout/LayoutHome";
+import LayoutPetugas from "../components/Layout/LayoutPetugas";
+import Login from "../components/Login/Login";
+import Register from "../components/Register/Register";
 
 // Create a client
 const queryClient = new QueryClient();
