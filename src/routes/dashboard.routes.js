@@ -15,11 +15,15 @@ const Routes = () => {
       <Route path="/customer/beranda" component={Beranda} />
       <Route path="/customer/data" component={HandleData} />
       <Route path="/customer/pengajuan" component={HandleForm} />
+
       {/* Route Petugas */}
       <Route exact path="/petugas/beranda" component={BerandaPetugas} />
-
       <Route exact path="/petugas/list-pengajuan" component={ListPengajuan} />
-      <Route path="/petugas/list-pengajuan/:id" component={DetailPengajuan} />
+      <Route
+        exact
+        path="/petugas/list-pengajuan/:id"
+        component={DetailPengajuan}
+      />
     </Switch>
   );
 };
