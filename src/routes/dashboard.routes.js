@@ -7,16 +7,16 @@ import HandleForm from "../components/Dashboard/Customer/HandleForm";
 import HandleData from "../components/Dashboard/Customer/HandleData";
 
 const Routes = () => {
-    return (
-        <Switch>
-            {/* Route Customer */}
-            <Route path="/customer/beranda" component={Beranda} />
-            <Route path="/customer/data" component={HandleData} />
-            <Route path="/customer/pengajuan" component={HandleForm} />
-            {/* Route Petugas */}
-            <Route path="/petugas/beranda" component={Beranda_Karwayan} />
-        </Switch>
-    );
+   return (
+      <Switch>
+         {/* Route Customer */}
+         <Route path="/customer/beranda" component={Beranda} />
+         <Route path="/customer/data" component={HandleData} />
+         <Route path="/customer/pengajuan" component={HandleForm} />
+         {/* Route Petugas */}
+         <Route path="/petugas/beranda" component={Beranda_Karwayan} />
+      </Switch>
+   );
 };
 
 export default Routes;

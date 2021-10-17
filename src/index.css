@@ -1,223 +1,229 @@
 .card {
-    padding: 40px;
-    min-height: 360px;
-    background-color: #fff;
+   padding: 40px;
+   min-height: 360px;
+   background-color: #fff;
 }
 
 .logo {
-    height: 40px;
-    margin: 16px;
-    background-color: transparent;
-    text-align: center;
-    border-radius: 2px;
+   height: 40px;
+   margin: 16px;
+   background-color: transparent;
+   text-align: center;
+   border-radius: 2px;
 }
 
 .logo__img {
-    height: 32px;
-    color: #fff;
-    margin-top: 3px;
+   height: 32px;
+   color: #fff;
+   margin-top: 3px;
 }
 
 .site-layout > .atas {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #fff;
-    padding: 16px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   background-color: #fff;
+   padding: 16px;
 }
 
 .content__data {
-    margin: 0 16px;
-    margin-top: 42px;
+   margin: 0 16px;
+   margin-top: 42px;
 }
 
 .content__data > .content__breadcrumb {
-    margin: 16px 0;
+   margin: 16px 0;
 }
 
 .title {
-    border-bottom: 1.5px solid #e0e0e0;
-    padding-bottom: 15px;
+   border-bottom: 1.5px solid #e0e0e0;
+   padding-bottom: 15px;
 }
 
 .data__diri {
-    display: grid;
+   display: grid;
 }
 
 .data__diri-table {
-    max-width: 100%;
+   max-width: 100%;
 }
 
 .data__content p {
-    padding: 15px 0;
-    font-weight: 500;
-    margin: 0;
-    font-size: 16px;
+   padding: 15px 0;
+   font-weight: 500;
+   margin: 0;
+   font-size: 16px;
 }
 
 .homepage__content p {
-    padding: 15px 0;
-    font-weight: 500;
-    margin: 0;
-    font-size: 16px;
+   padding: 15px 0;
+   font-weight: 500;
+   margin: 0;
+   font-size: 16px;
 }
 
 .data__content p span {
-    display: block;
-    color: #838383;
-    font-size: 15px;
-    margin-bottom: 4px;
+   display: block;
+   color: #838383;
+   font-size: 15px;
+   margin-bottom: 4px;
 }
 
 .data__content {
-    display: grid;
-    column-gap: 20px;
-    grid-template-columns: repeat(3, 1fr);
+   display: grid;
+   column-gap: 20px;
+   grid-template-columns: repeat(3, 1fr);
 }
 
 .homepage__content {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
 }
 
 .button__reset {
-    position: initial;
-    display: flex;
-    justify-content: flex-end;
+   position: initial;
+   display: flex;
+   justify-content: flex-end;
 }
 
 .button__reset > .button_1 {
-    color: #fff;
-    border-color: #ffc107;
-    background: #ffc107;
-    border-radius: 8px;
-    font-weight: 600;
-    font-size: 14px;
+   color: #fff;
+   border-color: #ffc107;
+   background: #ffc107;
+   border-radius: 8px;
+   font-weight: 600;
+   font-size: 14px;
 }
 
 .button-submit {
-    position: initial;
-    display: flex;
-    justify-content: flex-end;
+   position: initial;
+   display: flex;
+   justify-content: flex-end;
 }
 
 .button__submit {
-    color: #fff;
-    border-color: #ffc107;
-    background: #ffc107;
-    border-radius: 8px;
-    font-weight: 600;
-    font-size: 14px;
+   color: #fff;
+   border-color: #ffc107;
+   background: #ffc107;
+   border-radius: 8px;
+   font-weight: 600;
+   font-size: 14px;
+}
+
+.button-submit-pengajuan {
+   position: initial;
+   display: flex;
+   justify-content: flex-end;
 }
 
 .button__submit:hover {
-    color: #fff;
-    border-color: #ffcf3e;
-    background: #ffcf3e;
+   color: #fff;
+   border-color: #ffcf3e;
+   background: #ffcf3e;
 }
 
 .button__reset > .button_1:hover {
-    color: #fff;
-    border-color: #ffcf3e;
-    background: #ffcf3e;
+   color: #fff;
+   border-color: #ffcf3e;
+   background: #ffcf3e;
 }
 
 .button__reset > .button_2 {
-    color: #fff;
-    border-color: #08c40b;
-    background: #08c40b;
-    border-radius: 8px;
-    font-weight: 600;
-    font-size: 14px;
+   color: #fff;
+   border-color: #08c40b;
+   background: #08c40b;
+   border-radius: 8px;
+   font-weight: 600;
+   font-size: 14px;
 }
 
 .button__reset > .button_2:hover {
-    color: #fff;
-    border-color: #1be21f;
-    background: #1be21f;
+   color: #fff;
+   border-color: #1be21f;
+   background: #1be21f;
 }
 
 .button__reset > .button_3 {
-    color: #fff;
-    border-color: #de8f10;
-    background: #de8f10;
-    border-radius: 8px;
-    font-weight: 600;
-    font-size: 14px;
+   color: #fff;
+   border-color: #de8f10;
+   background: #de8f10;
+   border-radius: 8px;
+   font-weight: 600;
+   font-size: 14px;
 }
 
 .button__reset > .button_3:hover {
-    color: #fff;
-    border-color: #deab10;
-    background: #deab10;
+   color: #fff;
+   border-color: #deab10;
+   background: #deab10;
 }
 
 .homepage {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   gap: 20px;
 }
 
 .form__data {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
+   display: grid;
+   grid-template-columns: repeat(1, 1fr);
 }
 
 .form__data-content {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
 }
 
 .sidebar__item {
-    display: initial;
-    padding-right: 5px;
-    font-size: 16px;
+   display: initial;
+   padding-right: 5px;
+   font-size: 16px;
 }
 
 .label {
-    margin-left: 5px;
-    margin-bottom: 2px;
+   margin-left: 5px;
+   margin-bottom: 2px;
 }
 
 .home > p {
-    padding: 0 2px;
+   padding: 0 2px;
 }
 
 .label_field {
-    font-size: 14px !important;
-    font-weight: 600;
-    color: #363636;
+   font-size: 14px !important;
+   font-weight: 600;
+   color: #363636;
 }
 
 .cstm-background {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 16px 0;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin: 16px 0;
 }
 
 .text_header {
-    font-size: 16px;
-    font-weight: 500;
-    margin-left: 16px;
+   font-size: 16px;
+   font-weight: 500;
+   margin-left: 16px;
 }
 
 .header_class {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
 }
 
 .data__content-pengajuan {
-    padding: 15px 0;
-    font-weight: 500;
-    font-size: 16px;
-    margin: 0;
+   padding: 15px 0;
+   font-weight: 500;
+   font-size: 16px;
+   margin: 0;
 }
 
 .data__content-pengajuan > span {
-    display: block;
-    color: #838383;
-    font-size: 15px;
-    margin-bottom: 4px;
+   display: block;
+   color: #838383;
+   font-size: 15px;
+   margin-bottom: 4px;
 }
