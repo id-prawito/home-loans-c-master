@@ -1,44 +1,44 @@
 import React, { useState, useEffect } from "react";
 import { Form, Input, Button } from "antd";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import logoBRI from "../../assets/img/logo.svg";
 import "./Register.css";
 
 function Register() {
     // Fungsi Untuk Form
+    const [status, setStatus] = useState(false);
     const [form] = Form.useForm();
     const [, forceUpdate] = useState({}); // To disable submit button at the beginning.
     useEffect(() => {
         forceUpdate({});
     }, []);
-    const onFinish = async (values) => {
-        console.log("Received values of form: ", values);
-        // const credentials = {
-        //     username: values.username,
-        //     password: values.password,
-        //     confirm: values.confirm,
-        // };
-        // const response = await loginUser(credentials);
-        // localStorage.setItem("token", response.token);
+
+    const onFinish = (values) => {
+        const credentials = {
+            username: values.username,
+            password: values.password,
+        };
+
+        fetch("http://localhost:3030/register", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(credentials),
+        })
+            .then((data) => data.json())
+            .then((response) => {
+                if (response.status) {
+                    setStatus(true);
+                } else {
+                    alert(response.error);
+                }
+            });
     };
 
-    // async function loginUser(credentials) {
-    //     return fetch("http://localhost:8080/register", {
-    //         method: "POST",
-    //         headers: {
-    //             "Content-Type": "application/json",
-    //         },
-    //         body: JSON.stringify(credentials),
-    //     }).then((data) => data.json());
-    // }
-
-    // const tokensave = localStorage.getItem("token");
-
-    // if (!tokensave) {
-    //     return <Redirect to="/customer" />;
-    // }
-
-    //Bikin State Suksess
+    if (status) {
+        return <Redirect to="/customer-login" />;
+    }
 
     return (
         <div className="register__form">

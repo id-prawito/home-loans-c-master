@@ -1,16 +1,29 @@
 import { Button, Image } from "antd";
 import berandaImage from "../../../assets/img/beranda.png";
 import { Content, Header } from "antd/lib/layout/layout";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../../app.css";
-// import React, { useEffect, useState } from "react";
 // import { Redirect } from "react-router-dom";
-// import axios from "axios";
+
+import { getJWTData } from "../../../helper/jwt";
+import axios from "axios";
 
 const Beranda = () => {
-    // useEffect(() => {
-    //     getPengajuan();
-    // }, []);
+    useEffect(() => {
+        // getPengajuan();
+        checkApply();
+    });
+
+    const [applyMessage, setApplyMessage] = useState("");
+
+    const checkApply = async () => {
+        let userData = getJWTData();
+        const response = await axios.get(
+            `http://localhost:3030/checkApply?id_cust=${userData.data.id_user}`
+        );
+
+        setApplyMessage(response.data.result.message);
+    };
 
     // const [pengajuan, setPengajuan] = useState([]);
     // const [loading, setLoading] = useState(false);
@@ -66,7 +79,7 @@ const Beranda = () => {
                         style={{ display: "initial" }}
                     >
                         <p>
-                            <span>Belum ada pengajuan KPR ? </span>
+                            {applyMessage}
                             Ajukan KPR online, wujudkan rumah idamanmu bersama
                             Bank BRI
                         </p>

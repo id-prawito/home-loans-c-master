@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Form, Input, Button } from "antd";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import logoBRI from "../../assets/img/logo.svg";
 import "./Login.css";
 
 function Login() {
     const [form] = Form.useForm();
+    const [status, setStatus] = useState(false);
     const [, forceUpdate] = useState({}); // To disable submit button at the beginning.
 
     useEffect(() => {
@@ -13,19 +14,32 @@ function Login() {
     }, []);
 
     const onFinish = (values) => {
-        console.log("Finish:", values);
+        const credentials = {
+            username: values.username,
+            password: values.password,
+        };
 
-        // if (values.username === "Primus" && values.password === "primusvero") {
-        //     localStorage.setItem("token", "abcdesf");
-        // }
+        fetch("http://localhost:3030/login", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(credentials),
+        })
+            .then((data) => data.json())
+            .then((response) => {
+                if (response.status) {
+                    setStatus(true);
+                    localStorage.setItem("token", response.result.token);
+                } else {
+                    alert(response.error);
+                }
+            });
     };
 
-    // const tokensave = localStorage.getItem("token");
-
-    // console.log(tokensave);
-    // if (tokensave === "abcdesf") {
-    //     return <Redirect to="/customer" />;
-    // }
+    if (status) {
+        return <Redirect to="/customer/beranda" />;
+    }
 
     return (
         <div className="login__form">
