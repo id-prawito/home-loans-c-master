@@ -1,5 +1,6 @@
 import { QueryClient, QueryClientProvider } from "react-query";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
+import ListKelengkapan from "../components/Dashboard/Petugas/ListKelengkapan";
 import LayoutHome from "../components/Layout/LayoutHome";
 import LayoutPetugas from "../components/Layout/Petugas/LayoutPetugas";
 import Login from "../components/Login/Login";

@@ -4,14 +4,15 @@ import { Link } from "react-router-dom";
 
 import "antd/dist/antd.css";
 import axios from "axios";
+import baseURL from "../../../../configs/axios-variable";
 
 function TableList() {
   const [pengajuans, setPengajuans] = useState([]);
 
   const getPengajuans = async () => {
     try {
-      let response = await axios.get("http://localhost:8000/pengajuan");
-      setPengajuans(response.data);
+      let response = await axios.get(baseURL + "/list_pengajuan");
+      setPengajuans(response.data.data);
       // console.log("response >>", response.data);
     } catch (e) {
       console.log(e.message);
@@ -27,15 +28,14 @@ function TableList() {
     key: data.id_pengajuan,
     index: data.id_pengajuan,
     status:
-      data.status === "Menunggu Verifikasi" ? (
+      data.status === 1 ? (
         <Tag color="geekblue">MENUNGGU VERIFIKASI</Tag>
-      ) : data.status === "Terverifikasi" ? (
+      ) : data.status === 2 ? (
         <Tag color="green">TERVERIFIKASI</Tag>
       ) : (
         <Tag color="volcano">TIDAK TERVERIFIKASI</Tag>
       ),
   }));
-  // console.log(">>", JSON.parse(dataSource));
 
   const columns = [
     {

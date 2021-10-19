@@ -35,6 +35,7 @@
   ],
   "list_kelengkapan": [
     {
+      "id": 1,
       "id_kelengkapan": 1,
       "id_pengajuan": 1,
       "alamat_rumah": "Jl.Permai 5 No.11A, Komplek Cipadung Permai Bandung Raya",
@@ -42,7 +43,7 @@
       "harga_rumah": 500000000,
       "jangka_pembayaran_thn": 5,
       "dokumen_pendukung": "test.pdf",
-      "status": 1
+      "status": "Menunggu Verifikasi"
     }
   ],
   "beranda_petugas": [
@@ -50,18 +51,12 @@
       "menunggu_verifikasi": 1
     }
   ],
-  "status": [
+  "status": [],
+  "status_kelengkapan_data": [
     {
-      "id": 1
-    },
-    {
-      "id": 2
-    },
-    {
-      "id": 3
-    },
-    {
-      "id": 4
+      "id": "1",
+      "id_kelengkapan": "1",
+      "status": "Disetujui"
     }
   ],
   "sidebar_routes": [
@@ -108,36 +103,6 @@
       "display_name": "Keluar",
       "route": "/",
       "icon": "bx bx-log-out-circle"
-    }
-  ],
-  "list_pengajuan": [
-    {
-      "id": 123,
-      "nama": "Abrianto",
-      "tanggal_pengajuan": "11 September 2021",
-      "status": 1,
-      "action": "lihat detail"
-    },
-    {
-      "id": 234,
-      "nama": "Prawito",
-      "tanggal_pengajuan": "7 Juli 2021",
-      "status": 1,
-      "action": "lihat detail"
-    },
-    {
-      "id": 235,
-      "nama": "Putra",
-      "tanggal_pengajuan": "22 Agustus 2021",
-      "status": 1,
-      "action": "lihat detail"
-    },
-    {
-      "id": 465,
-      "nama": "Irham",
-      "tanggal_pengajuan": "17 Juli 2021",
-      "status": 1,
-      "action": "lihat detail"
     }
   ],
   "user": [
