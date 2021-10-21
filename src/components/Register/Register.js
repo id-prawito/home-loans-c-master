@@ -19,7 +19,7 @@ function Register() {
             password: values.password,
         };
 
-        fetch("http://localhost:3030/register", {
+        fetch("http://backend-c-home-loans.digitalent.rakamin.com/signup", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

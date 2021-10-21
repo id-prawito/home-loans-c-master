@@ -25,28 +25,6 @@ const Beranda = () => {
         setApplyMessage(response.data.result.message);
     };
 
-    // const [pengajuan, setPengajuan] = useState([]);
-    // const [loading, setLoading] = useState(false);
-
-    // const getPengajuan = async () => {
-    //     try {
-    //         const response = await axios.get(
-    //             "http://localhost:8000/pengajuan?id_cust=1"
-    //         );
-    //         setPengajuan(response.data);
-    //         setLoading(true);
-    //     } catch (error) {
-    //         alert(error.message);
-    //     }
-    // };
-
-    // console.log(pengajuan);
-
-    // const tokensave = localStorage.getItem("token");
-    // if (tokensave === "") {
-    //     return <Redirect to="/customer-login" />;
-    // }
-
     return (
         <>
             <Header
