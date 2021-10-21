@@ -1,7 +1,7 @@
 on:
   push:
     branches:
-      - main
+      - master
 env:
   TEAM_NAME: ${{ secrets.TEAM_NAME }}
 name: Deploy to Google App Engine
