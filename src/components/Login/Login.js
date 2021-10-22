@@ -19,11 +19,10 @@ function Login() {
             password: values.password,
         };
 
-        fetch("http://backend-c-home-loans.digitalent.rakamin.com/login", {
+        fetch("http://localhost:3030/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
-                "Set-Cookie": "token",
             },
             body: JSON.stringify(credentials),
         })
@@ -31,7 +30,7 @@ function Login() {
             .then((response) => {
                 if (response.status) {
                     setStatus(true);
-                    // localStorage.setItem("token", response.result.token);
+                    localStorage.setItem("token", response.result.token);
                 } else {
                     alert(response.error);
                 }

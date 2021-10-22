@@ -9,21 +9,21 @@ import { getJWTData } from "../../../helper/jwt";
 import axios from "axios";
 
 const Beranda = () => {
-    useEffect(() => {
-        // getPengajuan();
-        checkApply();
-    });
+    // useEffect(() => {
+    //     // getPengajuan();
+    //     checkApply();
+    // });
 
-    const [applyMessage, setApplyMessage] = useState("");
+    // const [applyMessage, setApplyMessage] = useState("");
 
-    const checkApply = async () => {
-        let userData = getJWTData();
-        const response = await axios.get(
-            `http://localhost:3030/checkApply?id_cust=${userData.data.id_user}`
-        );
+    // const checkApply = async () => {
+    //     let userData = getJWTData();
+    //     const response = await axios.get(
+    //         `http://localhost:3030/checkApply?id_cust=${userData.data.id_user}`
+    //     );
 
-        setApplyMessage(response.data.result.message);
-    };
+    //     setApplyMessage(response.data.result.message);
+    // };
 
     return (
         <>
@@ -57,9 +57,10 @@ const Beranda = () => {
                         style={{ display: "initial" }}
                     >
                         <p>
-                            {applyMessage}
-                            Ajukan KPR online, wujudkan rumah idamanmu bersama
-                            Bank BRI
+                            {/* {applyMessage}. Ajukan KPR online, wujudkan rumah
+                            idamanmu bersama Bank BRI */}
+                            Anda Belum mengajukan KPR. Ajukan KPR online,
+                            wujudkan rumah idamanmu bersama Bank BRI
                         </p>
                     </div>
                     <div className="button__reset">

@@ -14,7 +14,7 @@ const Routes = () => {
     return (
         <Switch>
             {/* Route Customer */}
-            <PrivateRoute path="/customer/beranda" component={Beranda} />
+            <Route path="/customer/beranda" component={Beranda} />
             <Route path="/customer/data" component={HandleData} />
             <Route path="/customer/pengajuan" component={HandleForm} />
 

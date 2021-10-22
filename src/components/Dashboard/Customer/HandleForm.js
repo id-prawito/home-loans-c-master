@@ -25,11 +25,13 @@ function HandleForm() {
             Object.keys(result).length === 0 &&
             Object.getPrototypeOf(result) === Object.prototype
         ) {
-            setFormType(FormKPRType.Pengajuan);
-        } else {
             setFormType(FormKPRType.Kelengkapan);
+        } else {
+            setFormType(FormKPRType.Pengajuan);
         }
     };
+
+    console.log(fomrType);
 
     return (
         <>
@@ -40,11 +42,15 @@ function HandleForm() {
                 <div className="text_header">Beranda</div>
             </Header>
             {/* --- Content --- */}
-            {fomrType === FormKPRType.Pengajuan ? (
+            {/* {fomrType === FormKPRType.Pengajuan ? (
                 <FormPengajuan />
             ) : (
                 <FormKelengkapan />
-            )}
+            )} */}
+
+            <FormPengajuan />
+
+            <FormKelengkapan />
         </>
     );
 }

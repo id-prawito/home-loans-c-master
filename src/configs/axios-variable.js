@@ -1,3 +1,3 @@
-const baseURL = process.env.REACT_APP_API_URL;
+const baseURL = "http://backend-c-home-loans.digitalent.rakamin.com";
 
 export default baseURL;
